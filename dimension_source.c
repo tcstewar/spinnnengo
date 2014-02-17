@@ -1,8 +1,14 @@
 #include "dimension_source.h"
 
 int c_main( void ) {
-  // Set up routing tables, for this test this should be comparatively simple
+  // Enable the timer tick callback
   spin1_callback_on( TIMER_TICK, timer_callback, 0 );
+
+  // Broadcast sent packets to every core
+  spin1_set_mc_table_entry( 0, 0x00000000, 0xffffffff, 0x00ffff80 );
+
+  // Go!
+  spin1_start( );
 }
 
 void timer_callback( uint simulation_time, uint none ) {
