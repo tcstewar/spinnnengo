@@ -2,6 +2,9 @@
 
 # C extensions
 *.so
+*.o
+*.elf
+*.aplx
 
 # Packages
 *.egg
