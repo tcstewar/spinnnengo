@@ -1,5 +1,5 @@
 #include "spin1_api.h"
-#include "../common/stdfix-full-iso.h"
+#include "stdfix-full-iso.h"
 
 /*
  * Necessarily hacky test source.
