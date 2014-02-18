@@ -2,6 +2,7 @@
 
 int c_main( void ) {
   // Enable the timer tick callback
+  spin1_set_timer_tick( 1000 ); // Timer tick / ms
   spin1_callback_on( TIMER_TICK, timer_callback, 0 );
 
   // Broadcast sent packets to every core
