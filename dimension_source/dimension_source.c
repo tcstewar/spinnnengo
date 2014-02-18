@@ -1,6 +1,7 @@
 #include "dimension_source.h"
 
-int c_main( void ) {
+int c_main( void )
+{
   // Enable the timer tick callback
   spin1_set_timer_tick( 1000 ); // Timer tick / ms
   spin1_callback_on( TIMER_TICK, timer_callback, 0 );
@@ -12,7 +13,8 @@ int c_main( void ) {
   spin1_start( );
 }
 
-void timer_callback( uint simulation_time, uint none ) {
+void timer_callback( uint simulation_time, uint none )
+{
   // Set some predefined values per dimension
   accum val = 0.5;
   spin1_send_mc_packet( 0x0000, (uint) val, 1 );
