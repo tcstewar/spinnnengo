@@ -3,7 +3,7 @@
 int c_main( void )
 {
   /* Initialise system as in the standard harness, see JK re correctly
-   * intergrating this code at some point. (We don't use delay buffers,
+   * integrating this code at some point. (We don't use delay buffers,
    * have dimension buffers, etc.)
    *
    *   - Setup routing table entries
